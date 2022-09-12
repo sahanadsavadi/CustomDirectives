@@ -1,4 +1,16 @@
-<input appColorful type="text" >
-<h1 [appAppHighlight]="color" >heloo world !
+<input appColorful type="text">
+<h1 [appAppHighlight]="color">heloo world !
 
 </h1>
+
+<div *appCarousel="let image images images;let ctrl =controler">
+
+ <img [src]="image" alt="sdasd">
+
+    <button (click)="ctrl.next()">next </button>
+    <button (click)="ctrl.preve()">preve</button> 
+</div>
+
+<!-- <ng-template [appCarousel]>
+    <div></div>
+</ng-template> -->
