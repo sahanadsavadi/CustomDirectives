@@ -1,6 +1,6 @@
 export interface ICarouselContext {
-  $impilicit: string;
-  controler: {
+  $implicit: any;
+  controller: {
     next: () => void;
     prev: () => void;
   };

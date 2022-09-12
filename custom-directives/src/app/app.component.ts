@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   color = 'yellow';
-  images: string[] = ['/assets/backe.jpeg', '/assets/download.jpeg', '/assets/images.jpeg'];
+  urlImage: string[] = ['../assets/img/backe.jpg','../assets/img/images.jpg','../assets/img/download.jpg'];
 }
