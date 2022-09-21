@@ -32,7 +32,7 @@ export class UserComponent implements OnInit {
 
   editUser() {
     this.router.navigate(['/user', this.user.id,'edit']);
-console.log( this.router.navigate(['/user', this.user.id,'edit']));
+    console.log( this.router.navigate(['/user', this.user.id,'edit']));
 
   }
 }
