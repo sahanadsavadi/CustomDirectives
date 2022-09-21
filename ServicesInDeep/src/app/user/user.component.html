@@ -1,7 +1,7 @@
 
 <div>
 <span>{{user.id + "  :  "}}</span>
-<a [routerLink]="['/user',user.id,'edit']">{{user.name }}</a>
+<a [routerLink]="['/edit-user',user.id]">{{user.name }}</a>
 <span>{{" =====> " + user.email }}</span>
 <button (click)="editUser()">Edit User</button>
 </div>

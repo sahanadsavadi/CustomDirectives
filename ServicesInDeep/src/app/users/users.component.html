@@ -2,6 +2,7 @@
 <div>
     <div *ngFor="let user of users">
         <span>{{ user.id + ': ' }}</span>
-        <a [routerLink]="['/user', user.id]">{{ user.name }}</a>
+        <a [routerLink]="['/user',user.id]" routerLinkActive="router-link-active" > {{user.name}}</a>
+        
     </div>
 </div>
