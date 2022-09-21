@@ -8,6 +8,8 @@ import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { MyCompanyService } from './my-company.service';
 
 export const USSER_AGENT = new InjectionToken<string>('USSER_AGENT');
 export const SCREEN_WIDTH = new InjectionToken<string>('SCREEN_WIDTH');
@@ -23,7 +25,7 @@ export const DIVACE_NAME_TOKEN = new InjectionToken<string>(
   'DIVACE_NAME_TOKEN'
 );
 @NgModule({
-  declarations: [AppComponent, UserComponent, UsersComponent, HomeComponent, NotFoundComponent],
+  declarations: [AppComponent, UserComponent, UsersComponent, HomeComponent, NotFoundComponent, EditUserComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     { provide: USSER_AGENT, useValue: window.navigator.userAgent },
@@ -34,6 +36,7 @@ export const DIVACE_NAME_TOKEN = new InjectionToken<string>(
       useFactory: divaceNameProvaider,
       deps: [USSER_AGENT, SCREEN_HEIGHT, SCREEN_WIDTH],
     },
+    {provide:MyCompanyService}
   ],
   bootstrap: [AppComponent],
 })

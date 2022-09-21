@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from '../Interface/app-interface';
 import { MyCompanyService } from '../my-company.service';
 
 @Component({
@@ -8,7 +9,11 @@ import { MyCompanyService } from '../my-company.service';
   providers: [MyCompanyService],
 })
 export class UsersComponent implements OnInit {
-  constructor(privatae: MyCompanyService) {}
+  users?: IUser[];
 
-  ngOnInit(): void {}
+  constructor(private MyCompanyService: MyCompanyService) {}
+
+  ngOnInit(): void {
+    this.users = this.MyCompanyService.user;
+  }
 }
