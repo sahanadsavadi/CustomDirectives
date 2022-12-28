@@ -55,7 +55,7 @@ export class CarouselDirective implements OnInit {
   public pleyAutoPlay() {
     this.timer = setInterval(() => {
       this.next();
-    }, 1000);
+    }, 1000000);
   }
   public clear() {
     clearInterval(this.timer);
